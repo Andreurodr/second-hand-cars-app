@@ -1,0 +1,24 @@
+{% extends "Cars/baseCars.html.twig" %}
+
+{% block contenido %}
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center" style="margin:20px"><h2>{{car.brand}} {{car.model}}</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <img src="{{car.photography}}">
+                    </div>
+                    <div class="col" style="margin:30px;font-size:25px;padding:30px;">
+                            <div><strong>Km: </strong>{{car.kilometers}}</div>
+                            <div><strong>Combustible: </strong>{{car.fuel}}</div>
+                            <div><strong>Año: </strong>{{car.year}}</div>
+                            <div><strong>Potencia: </strong>{{car.horsepower}} cv</div>
+                            <div><strong>Carrocería: </strong>{{car.type}}</div>
+                            <div><strong>Puertas: </strong>{{car.doors}}</div>
+                            <div><strong>Color: </strong>{{car.color}}</div>
+                            <div><strong>Precio: </strong>{{car.price}}€</div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}

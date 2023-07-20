@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../public/css/styles.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://www.marotoautomocion.com/wp-content/uploads/2015/12/revision-del-coche-de-segunda-mano.jpg" type="image/x-icon"/>
+    <title>{% block title %}Coches de Segunda Mano{% endblock %}</title>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg" style="background-color:midnightblue;margin-bottom:30px;font-family:Verdana;">
+        <a href="{{ path('home') }}"><img height="35px" style="margin:20px;border-radius:50px;border:1px solid white" src="https://www.marotoautomocion.com/wp-content/uploads/2015/12/revision-del-coche-de-segunda-mano.jpg"></a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" style="margin:20px;color:white;" href="{{ path('home') }}">Inicio</a>
+                <a class="nav-link"  style="margin:20px;color:white;" href="{{ path('listCars') }}">Listado Coches</a>
+                <a class="nav-link" style="margin:20px;color:white;" href="{{ path('insertCars') }}">Publicar Anuncio</a>
+            </div>
+        </div>
+</nav>
+<div class="container">
+    {% block contenido %}{% endblock%}
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "Cars/baseCars.html.twig" %}
+
+{% block contenido %}
+ {% for car in cars %}
+            <div class="container" style="margin:30px;border-bottom:1px solid black;">
+                <div style="text-align:center;">
+                    <div class="col text-center"><h2>{{car.brand}} {{car.model}}</h2></div>
+                </div>
+                <div class="col" style="text-align:center;">
+                    <div>
+                        <img src="{{car.photography}}" style="width:300px;">
+                    </div>
+                    <div>
+                        <a href="{{ path('getCar', {'id': car.id}) }}" class="btn btn-primary" style="margin:30px;background-color:midnightblue;border:none; padding: 10px 50px 10px 50px;">Más Info</a>
+                    </div>
+                </div>
+            </div>
+{% endfor %}
+{% endblock %}
+
+

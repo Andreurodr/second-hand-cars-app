@@ -1,0 +1,12 @@
+{% extends "Cars/baseCars.html.twig" %}
+
+{% block contenido %}
+
+<h1 style="text-align:center;margin:20px;font-family:Verdana;font-weight: bold;">Coches de Segunda Mano</h1>
+<h2 style="text-align:center;margin:20px;font-family:Verdana;font-weight: bold;color:midnightblue;">Descubre en este portal tu próximo coche</h2>
+        <div style="text-align:center;display:flex; justify-contents:center;flex-direction:column;align-items:center;">
+            <img style="width:350px;border-radius:190px;margin:20px;" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWlyMXQ0cDJqaGNhbG5qcjI4ZmtjbTFhY282c2NzZHltMm9zaGlxYSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ck0ZqwDvDh2z2o6IOM/giphy.gif" alt="new car">
+            <button class="play_btn" style="border-radius:10px;font-size:25px;margin:10px;padding:20px;background-color:white;color:black;border:2px solid midnightblue" onclick="window.location ='{{ path('listCars') }}'">Listado de coches de segunda mano</button>
+            <button class="play_btn" style="border-radius:10px;font-size:25px;margin:10px;padding:20px;background-color:midnightblue;color:white;border:none" onclick="window.location ='{{ path('insertCars') }}'">Publica tu anuncio aquí</button>
+            </div>
+{% endblock %}
